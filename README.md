@@ -1,6 +1,5 @@
 # docker-guestfs
 
-
 ```bash
 $ docker run -it --privileged --rm --name guestfs --workdir /workdir -v "${PWD}:/workdir" giantswarm/guestfs:1.0.0 bash
 ```
