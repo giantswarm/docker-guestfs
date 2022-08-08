@@ -1,10 +1,14 @@
 # docker-guestfs
 
+A docker image with `libguestfs` installed. Provides tools like `guestmount`, `guestfish`, etc.
+
+## Example usage in command line
+
 ```bash
 $ docker run -it --privileged --rm --name guestfs --workdir /workdir -v "${PWD}:/workdir" giantswarm/guestfs:1.0.0 bash
 ```
 
-Example in scripting:
+## Example usage in scripting
 
 ```bash
 docker container create -it --privileged --name guestfs --workdir /workdir -v "${PWD}:/workdir" giantswarm/guestfs:1.0.0 bash
