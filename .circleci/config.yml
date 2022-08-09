@@ -1,0 +1,18 @@
+version: 2.1
+
+orbs:
+  architect: giantswarm/architect@4.24.0
+
+workflows:
+  build:
+    jobs:
+      - architect/push-to-docker:
+          context: "architect"
+          name: push-to-docker
+          image: "docker.io/giantswarm/guestfs"
+          username_envar: "DOCKER_USERNAME"
+          password_envar: "DOCKER_PASSWORD"
+          # Needed to trigger job also on git tag.
+          filters:
+            tags:
+              only: /^v.*/
