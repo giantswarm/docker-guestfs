@@ -7,8 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2022-08-10
+
 ### Added
 
 - First release.
 
-[Unreleased]: https://github.com/giantswarm/docker-guestfs/tree/main
+[Unreleased]: https://github.com/giantswarm/docker-guestfs/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/giantswarm/docker-guestfs/releases/tag/v1.0.0
