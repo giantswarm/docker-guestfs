@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 # Package qemu and qemu-kvm are not really required but they are often useful
 # when libguestfs is used for e.g. for image conversion.
