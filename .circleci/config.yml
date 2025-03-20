@@ -1,15 +1,19 @@
 version: 2.1
 
 orbs:
-  architect: giantswarm/architect@5.1.1
+  architect: giantswarm/architect@5.11.6
 
 workflows:
   build:
     jobs:
-      - architect/push-to-registries:
-          context: architect
-          name: push-to-registries
-          filters:
-            tags:
-              only: /^v.*/
-          image: giantswarm/guestfs
+    - architect/push-to-registries:
+        context: architect
+        name: push-to-registries
+        filters:
+          tags:
+            only: /^v.*/
+          branches:
+            ignore:
+            - main
+            - master
+        image: giantswarm/guestfs
